@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+.prev{
+  cursor: pointer;
+}
+.next{
+  cursor: pointer;
+}
+.wrapper{
+padding-top: 5%;
+padding-left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar{
+  margin:auto;
+  width: 600px;
+  height: 500px;
+  box-shadow: 0 5px 30px 0 rgba(82, 63, 105, 0.2);
+}
+.active{
+background-color: rgba(0, 158, 255, 0.5);
+color: #fff;
+}
+.month {
+padding: 4px 25px;
+padding-top: 20px;
+width: 100%;
+background: #009eff;
+border-radius: 5px;
+text-align: center;
+}
+
+.month ul {
+margin: 0;
+padding: 0;
+}
+
+.month ul li {
+color: #ffffff;
+font-size: 20px;
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 3px;
+}
+
+.month .prev {
+float: left;
+padding-top: 10px;
+}
+
+.month .next {
+float: right;
+padding-top: 10px;
+}
+
+.weekdays{
+  width: 98.5%;
+  color: #fff;
+  margin: 2px 0px;
+  background-color:#009eff;
+  border-radius: 5px;
+  margin: 5px 5px;
+  margin-right: 0;
+}
+.weekdays .week{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 2% 0;
+}
+.weekdays .week li{
+  padding-right: 25px; 
+  margin-left: 3.5%;
+  width: 14.28%;
+  
+}
+
+.days {
+background-color: #ffffff;
+display: flex;
+text-align: center;
+flex-wrap: wrap;
+padding-left: 0;
+padding: 5px 5px;
+}
+.days ul{
+  border: 1px solid #5B5B5B;
+  border-radius: 5px;
+}
+.days li {
+  width: 14.28%;
+  list-style-type: none; 
+  text-align: center;
+  font-size:14px;
+  font-weight: 600;
+  color: #5B5B5B; 
+  border: 1px solid #5B5B5B;
+  border-radius: 2px;
+  padding: 14px 4px;
+  transition: all 0.4s;
+}
+.days li:hover{
+  background-color: #dfe6e9;
+  cursor: pointer;
+}
+.prevDate{
+  color: #858585;
+  font-size:10px;
+  font-weight: 100;
+}
+.days li .active {
+color: #009eff !important
+}
+
+.row{
+  background-color: #009eff;
+  width: 100%;
+  border-radius: 3px;
+  padding-top: 2%;
+  color: #fff;
+  text-align: center;
+}
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+.weekdays li, .days li {width: 14.8%;}
+}
+
+@media screen and (max-width: 420px) {
+.weekdays li, .days li {width: 10px;}
+.days li .active {padding: 2px;}
+
+
+.calendar{
+margin:auto;
+width: 220px;
+height: 200px;
+box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.month {
+padding: 4px 25px;
+width: 100%;
+background: #009eff;
+border-radius: 5px;
+text-align: center;
+}
+
+.month ul {
+margin: 0;
+padding: 0;
+}
+
+.month ul li {
+color: #ffffff;
+font-size: 20px;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+
+.weekdays{
+width: 95%;
+color: #fff;
+margin: 2px 0px;
+background-color:#009eff;
+border-radius: 2px;
+margin: 5px 5px;
+margin-right: 0;
+}
+.weekdays .week{
+display: flex;
+text-align: center;
+padding: 2% 0;
+padding-right: 3px;
+}
+.weekdays .week li{
+font-size: 10px;
+padding: 0;
+}
+
+.days {
+background-color: #ffffff;
+padding: 5px 5px;
+width: 100%;
+padding-right: 0%;
+}
+.days ul{
+  border: 1px solid #5B5B5B;
+  border-radius: 1px;
+}
+.days li {
+  width: 100%;
+  padding: 5px 3px;
+}
+}
+
+@media screen and (max-width: 290px) {
+.weekdays li, .days li {width: 14%;}
+}
